@@ -10,7 +10,7 @@ export function Product( { product } : ProductProps ) {
     const currencyCtx = useContext(CurrencyContext);
     
     return (
-        <div>
+        <div className="product-card">
             <h2>{ product.name }</h2>
             <p>{ product.description }</p>
             <p>{ currencyCtx.format(product.price)}</p>

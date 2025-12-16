@@ -6,6 +6,7 @@ import { Header } from './comps/Header'
 import { ProductList } from './comps/ProductList'
 import { CurrencyContext } from './contexts/currancyContext'
 
+
 function App() {
   
   const currancyContext = useContext(CurrencyContext);

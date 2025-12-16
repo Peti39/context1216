@@ -25,10 +25,17 @@ export function ProductList() {
             <div>
                 <h3>Össz ár: {currencyCtx.format(totalPrice)}</h3>
             </div>
-            <div>
+            <div className="container">
+                <div className="row">
+
                 {products.map((p) =>(
-                    <Product key={p.name} product={p} />
+                    <div className="col-md-4">
+                        <Product key={p.name} product={p} />
+
+                    </div>
                 ))}
+                </div>
+
             </div>
         </div>
     );
