@@ -1,16 +1,19 @@
 import type { ProductData } from "../types/product";
+import { useContext } from "react";
+import { CurrencyContext } from "../contexts/currancyContext";
 
 type ProductProps = {
     product : ProductData;
 };
 
 export function Product( { product } : ProductProps ) {
-    //toFixed(2)
+    const currencyCtx = useContext(CurrencyContext);
+    
     return (
         <div>
             <h2>{ product.name }</h2>
             <p>{ product.description }</p>
-            <p>{ product.price}</p>
+            <p>{ currencyCtx.format(product.price)}</p>
         </div>
     );
 }
